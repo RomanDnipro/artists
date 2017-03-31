@@ -15,3 +15,5 @@ public class Academy {
         return artist;
     }
 }
+//геттеры и сеттеры
+//также сканнер вынести
