@@ -6,18 +6,13 @@ import java.util.Scanner;
 public class Academy {
 
     Artist teach(Human human, String pseudonym, Skill skill){
-        Artist artist = new Artist(human);
+        Artist artist = new Artist();
+        artist.setName(human.getName());
+        artist.setAge(human.getAge());
         artist.setPseudonym(pseudonym);
         artist.setSkill(skill);
-
-
-//        artist.name = human.name;
-//        artist.age = human.age;
-//        System.out.println("Enter the pseudonym of " + Artist.quantity + " artist:");
-//        Scanner sc = new Scanner(System.in);
-//        artist.pseudonym = sc.nextLine();
         return artist;
     }
 }
-//геттеры и сеттеры
-//также сканнер вынести
+//геттеры и сеттеры //done
+//также сканнер вынести //done

@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Created by Роман on 30.03.2017.
  */
@@ -32,14 +30,17 @@ public class Human {
         this.name = name;
         this.age = age;
     }
+}
+//вынести сканнер и sout нахрен отсюда //done
+//везде инкапсулировать поля // done
 
-    //    public Human() {
+
+
+
+//    public Human() {
 //        System.out.println("Enter the name of the human:");
 //        Scanner sc = new Scanner(System.in);
 //        this.name = sc.nextLine();
 //        System.out.println("Enter the age of the human:");
 //        this.age = Integer.parseInt(sc.nextLine());
 //    }
-}
-//вынести сканнер и sout нахрен отсюда
-//везде инкапсулировать поля

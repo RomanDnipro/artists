@@ -1,6 +1,5 @@
 /**
- * Created by root on 31.03.17.
+ * Created by Роман on 01.04.2017.
  */
-public interface Dancer {
-    void dance();
+public abstract class Dancer extends Skill{
 }

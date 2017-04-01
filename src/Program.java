@@ -8,28 +8,45 @@ public class Program {
 
         Scanner sc = new Scanner(System.in);
 
-
+        /**
+         * Создаём людей
+         */
         System.out.println("Input the name and the age of the human (use a 'Enter'key between them): ");
-        Human h1 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
+        Human human1 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
         System.out.println("Input the name and the age of the human (use a 'Enter'key between them): ");
-        Human h2 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
+        Human human2 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
         System.out.println("Input the name and the age of the human (use a 'Enter'key between them): ");
-        Human h3 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
-//        System.out.println(h1.getName() + " " + h1.getAge());
-//        System.out.println(h2.getName() + " " + h2.getAge());
-//        System.out.println(h3.getName() + " " + h3.getAge());
+        Human human3 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
 
+        /**
+         * Создаём академию
+         * и обучаем людей
+         */
+        Academy academy = new Academy();
 
+        /**
+         * Создаём академию.
+         * В академию принимаем людей.
+         * Задаём в консоли псевдонимы будущих артистов,
+         * задаём каждому случайный навык
+         */
+        System.out.println("Enter the pseudonym of artist:");
+        Artist artist1 = academy.teach(human1, sc.nextLine(), RandomSkill.randSkill());
+        System.out.println("Enter the pseudonym of artist:");
+        Artist artist2 = academy.teach(human2, sc.nextLine(), RandomSkill.randSkill());
+        System.out.println("Enter the pseudonym of artist:");
+        Artist artist3 = academy.teach(human3, sc.nextLine(), RandomSkill.randSkill());
 
+        /**
+         * Создаём концерт,
+         * передаём ему массив обученных
+         * ранее артистов
+         * и вызываем его методы
+         */
+        Concert concert = new Concert(new Artist[]{artist1, artist2, artist3});
 
-
-
-
-//        Academy academy = new Academy();
-//        Artist artist1 = academy.teach(h1);
-//        System.out.println(artist1.name);
-//        System.out.println(artist1.age);
-//        System.out.println(artist1.pseudonym);
+        concert.introduceAnArtists();
+        concert.show();
     }
 }
 
