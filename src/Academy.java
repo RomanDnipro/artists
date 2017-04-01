@@ -5,13 +5,17 @@ import java.util.Scanner;
  */
 public class Academy {
 
-    Artist teach(Human human){
-        Artist artist = new Artist();
-        artist.name = human.name;
-        artist.age = human.age;
-        System.out.println("Enter the pseudonym of " + Artist.quantity + " artist:");
-        Scanner sc = new Scanner(System.in);
-        artist.pseudonym = sc.nextLine();
+    Artist teach(Human human, String pseudonym, Skill skill){
+        Artist artist = new Artist(human);
+        artist.setPseudonym(pseudonym);
+        artist.setSkill(skill);
+
+
+//        artist.name = human.name;
+//        artist.age = human.age;
+//        System.out.println("Enter the pseudonym of " + Artist.quantity + " artist:");
+//        Scanner sc = new Scanner(System.in);
+//        artist.pseudonym = sc.nextLine();
         return artist;
     }
 }

@@ -13,7 +13,7 @@ public class Concert {
 
     void introduceAnArtists(){
         for (Artist artist : troupe){
-            System.out.println(artist.name + " " + artist.age + " years " + artist.pseudonym);
+            System.out.println(artist.getName() + " " + artist.getAge() + " years " + artist.getPseudonym());
         }
     }
     void show(){
