@@ -1,10 +1,10 @@
 /**
  * Created by Роман on 30.03.2017.
  */
-public class Artist extends Human {
+abstract public class Artist /*extends Human */{
 
     private String pseudonym;
-    private Skill skill;
+    private Human human;
 
     public String getPseudonym() {
         return pseudonym;
@@ -14,28 +14,36 @@ public class Artist extends Human {
         this.pseudonym = pseudonym;
     }
 
-    public Skill getSkill() {
-        return skill;
+    public Human getHuman() {
+        return human;
     }
 
-    public void setSkill(Skill skill) {
-        this.skill = skill;
+    public void setHuman(Human human) {
+        this.human = human;
+    }
+
+    public String getName(){
+        return human.getName();
+    }
+
+    public void setName(String name){
+        this.human.setName(name);
+    }
+
+    public int getAge(){
+        return human.getAge();
+    }
+
+    public void setAge(int age){
+        this.human.setAge(age);
+    }
+
+    public Artist() {
+    }
+
+    public Artist(String pseudonym, Human human) {
+
+        this.pseudonym = pseudonym;
+        this.human = human;
     }
 }
-
-
-//    public Artist(Human human) {
-//        this.setName(human.getName());
-//        this.setAge(human.getAge());
-//    }
-//
-//    public Artist(String pseudonym, Skill skill) {
-//        this.pseudonym = pseudonym;
-//        this.skill = skill;
-//    }
-//
-//    public Artist(String name, int age, String pseudonym, Skill skill) {
-//        super(name, age);
-//        this.pseudonym = pseudonym;
-//        this.skill = skill;
-//    }

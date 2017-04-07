@@ -9,7 +9,7 @@ public class Program {
         Scanner sc = new Scanner(System.in);
 
         /**
-         * Создаём людей
+         * Creating people
          */
         System.out.println("Input the name and the age of the human (use a 'Enter'key between them): ");
         Human human1 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
@@ -19,29 +19,24 @@ public class Program {
         Human human3 = new Human(sc.nextLine(),Integer.parseInt(sc.nextLine()));
 
         /**
-         * Создаём академию
-         * и обучаем людей
+         * Creating academy.
+         * The academy accepted people.
+         * Set the pseudonym for artists,
+         * each artist accepted random skill
+         * (they become certain artist, like drummer)
          */
         Academy academy = new Academy();
+        System.out.println("Enter the pseudonym of artist:");
+        Artist artist1 = academy.teach(human1, sc.nextLine());
+        System.out.println("Enter the pseudonym of artist:");
+        Artist artist2 = academy.teach(human2, sc.nextLine());
+        System.out.println("Enter the pseudonym of artist:");
+        Artist artist3 = academy.teach(human3, sc.nextLine());
 
         /**
-         * Создаём академию.
-         * В академию принимаем людей.
-         * Задаём в консоли псевдонимы будущих артистов,
-         * задаём каждому случайный навык
-         */
-        System.out.println("Enter the pseudonym of artist:");
-        Artist artist1 = academy.teach(human1, sc.nextLine(), RandomSkill.randSkill());
-        System.out.println("Enter the pseudonym of artist:");
-        Artist artist2 = academy.teach(human2, sc.nextLine(), RandomSkill.randSkill());
-        System.out.println("Enter the pseudonym of artist:");
-        Artist artist3 = academy.teach(human3, sc.nextLine(), RandomSkill.randSkill());
-
-        /**
-         * Создаём концерт,
-         * передаём ему массив обученных
-         * ранее артистов
-         * и вызываем его методы
+         * Creating concert.
+         * We give an array of artists to concert.
+         * And call it's methods
          */
         Concert concert = new Concert(new Artist[]{artist1, artist2, artist3});
 

@@ -25,8 +25,21 @@ public class Concert {
 
     void show(){
         for (Artist artist : troupe){
-            System.out.print(artist.getPseudonym() + " ");
-            artist.getSkill()._do();
+            if (artist instanceof Dancer){
+                System.out.print(artist.getPseudonym() + " is ");
+                ((Dancer) artist).dance();
+            } else {
+                if (artist instanceof Singer){
+                    System.out.print(artist.getPseudonym() + " is ");
+                    ((Singer) artist).sing();
+                } else {
+                    if (artist instanceof Musician){
+                        System.out.print(artist.getPseudonym() + " is ");
+                        ((Musician) artist).play();
+                    }
+                }
+            }
         }
     }
+
 }

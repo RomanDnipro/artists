@@ -6,7 +6,6 @@ public class Human {
     private String name;
     private int age;
 
-
     public String getName() {
         return name;
     }
@@ -30,6 +29,7 @@ public class Human {
         this.name = name;
         this.age = age;
     }
+
 }
 //вынести сканнер и sout нахрен отсюда //done
 //везде инкапсулировать поля // done

@@ -1,7 +1,11 @@
+import java.util.Random;
+
 /**
  * Created by Роман on 02.04.2017.
  */
 public class RandomSkill {
+
+    private static Random random = new Random();
 
     private static int totalQuantityOfSkills = 6;
 
@@ -13,32 +17,28 @@ public class RandomSkill {
         RandomSkill.totalQuantityOfSkills = totalQuantityOfSkills;
     }
 
-    static Skill randSkill(){
-        switch ((int) (Math.random() * (getTotalQuantityOfSkills() + 1))){
+    static Artist randSkill(){
+        switch (random.nextInt(totalQuantityOfSkills)/*(int) (Math.random() * (getTotalQuantityOfSkills() + 1))*/){
             case 0:
                 return new DancerDisco();
-                //break;
 
             case 1:
                 return new ValseDancer();
-                //break;
 
             case 2:
                 return new Drummer();
-                //break;
 
             case 3:
                 return new GuitarPlayer();
-                //break;
 
             case 4:
                 return new OperaSinger();
-                //break;
 
             case 5:
                 return new PopSinger();
-                //break;
+
+            default:
+                return null;
         }
-        return null;
     }
 }
