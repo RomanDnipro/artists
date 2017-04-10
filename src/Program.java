@@ -63,3 +63,5 @@ public class Program {
 //                h3.setName(sc.nextLine());
 //                System.out.println("Enter the age of the human:");
 //                h3.setAge(Integer.parseInt(sc.nextLine()));
+
+//обучать группу артистов в цикле  группу людей также

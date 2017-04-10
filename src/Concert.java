@@ -7,11 +7,11 @@ public class Concert {
 
     public Artist[] getTroupe() {
         return troupe;
-    }
+    } //не  используются
 
     public void setTroupe(Artist[] troupe) {
         this.troupe = troupe;
-    }
+    }  //не  используются
 
     public Concert(Artist[] artists){
         this.troupe = artists;
@@ -28,16 +28,12 @@ public class Concert {
             if (artist instanceof Dancer){
                 System.out.print(artist.getPseudonym() + " is ");
                 ((Dancer) artist).dance();
-            } else {
-                if (artist instanceof Singer){
+            } else if (artist instanceof Singer){
                     System.out.print(artist.getPseudonym() + " is ");
                     ((Singer) artist).sing();
-                } else {
-                    if (artist instanceof Musician){
-                        System.out.print(artist.getPseudonym() + " is ");
-                        ((Musician) artist).play();
-                    }
-                }
+            } else if (artist instanceof Musician){
+                    System.out.print(artist.getPseudonym() + " is ");
+                    ((Musician) artist).play();
             }
         }
     }
