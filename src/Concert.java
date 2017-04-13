@@ -1,17 +1,6 @@
-/**
- * Created by Роман on 30.03.2017.
- */
 public class Concert {
 
     private Artist[] troupe;
-
-    public Artist[] getTroupe() {
-        return troupe;
-    } //не  используются
-
-    public void setTroupe(Artist[] troupe) {
-        this.troupe = troupe;
-    }  //не  используются
 
     public Concert(Artist[] artists){
         this.troupe = artists;
@@ -39,3 +28,8 @@ public class Concert {
     }
 
 }
+
+
+//    public Artist[] getTroupe() {
+//        return troupe;
+//    } //не  используются

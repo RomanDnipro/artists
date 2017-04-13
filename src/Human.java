@@ -1,6 +1,3 @@
-/**
- * Created by Роман on 30.03.2017.
- */
 public class Human {
 
     private String name;
@@ -9,29 +6,35 @@ public class Human {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public int getAge() {
         return age;
     }
-
     public void setAge(int age) {
         this.age = age;
     }
 
     public Human() {
     }
-
     public Human(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
-//вынести сканнер и sout нахрен отсюда //done
+
+
+
+//вынести сканнер и sout отсюда //done
 //везде инкапсулировать поля // done
 
 

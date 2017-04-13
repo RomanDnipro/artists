@@ -1,7 +1,8 @@
-/**
- * Created by Роман on 01.04.2017.
- */
 public class Drummer extends Artist implements Musician{
+
+    public Drummer(Human human, String pseudonym) {
+        super(human, pseudonym);
+    }
 
     @Override
     public void play() {

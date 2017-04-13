@@ -1,7 +1,8 @@
-/**
- * Created by Роман on 01.04.2017.
- */
 public class PopSinger extends Artist implements Singer{
+
+    public PopSinger(Human human, String pseudonym) {
+        super(human, pseudonym);
+    }
 
     @Override
     public void sing() {

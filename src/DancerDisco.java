@@ -1,7 +1,8 @@
-/**
- * Created by root on 31.03.17.
- */
 public class DancerDisco extends Artist implements Dancer{
+
+    public DancerDisco(Human human, String pseudonym) {
+        super(human, pseudonym);
+    }
 
     @Override
     public void dance() {
