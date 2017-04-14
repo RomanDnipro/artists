@@ -1,7 +1,7 @@
 public class Validator {
 
     boolean isNameValid(String s){
-        return s.matches("([A-Za-zА-Яа-я]+ ?)+");
+        return s.matches("([A-Za-zА-Яа-яёЁ]+ ?)+");
     }
 
     boolean isArrValid(Object[] arr){

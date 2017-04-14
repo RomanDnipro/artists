@@ -68,17 +68,12 @@ public class Program {
         concert.introduceAnArtists();
         concert.show();
 
-//        System.out.println("Enter the pseudonym of artist:");
-//        Artist artist1 = academy.teach(human1, sc.nextLine());
-//        System.out.println("Enter the pseudonym of artist:");
-//        Artist artist2 = academy.teach(human2, sc.nextLine());
-//        System.out.println("Enter the pseudonym of artist:");
-//        Artist artist3 = academy.teach(human3, sc.nextLine());
-
-
-
     }
 }
+
+
+
+
 
 
 //
